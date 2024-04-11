@@ -38,9 +38,9 @@ exports.checkAccountNameUnique = async (req, res, next) => {
     } else {
       next()
     }
- } catch (err) {
-   next(err)
- }
+  } catch (err) {
+    next(err)
+  }
 
 }
 
