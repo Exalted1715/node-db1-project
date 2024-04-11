@@ -5,7 +5,7 @@ router.get('/', (req, res, next) => {
   try{
   res.json('get accounts')
   } catch (err){
-    next({status: 422, message: 'not found'})
+    next(err)
   }
 })
 
