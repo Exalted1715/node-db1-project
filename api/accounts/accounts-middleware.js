@@ -19,6 +19,11 @@ exports.checkAccountPayload = (req, res, next) => {
     error.message = 'budget of account is too large or too small'
     next(error)
   }
+  if(error.message){
+    next(error)
+  } else {
+    next()
+  }
 }
 
 exports.checkAccountNameUnique = (req, res, next) => {
